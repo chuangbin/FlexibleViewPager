@@ -49,6 +49,7 @@ public class FlexibleViewPager extends ViewPager {
                 }
                 break;
             case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_POINTER_UP://多点触摸后松开
                 if (isMoveLeft || isMoveRight) {
                     animation(xMove);//还原位置
                 }
