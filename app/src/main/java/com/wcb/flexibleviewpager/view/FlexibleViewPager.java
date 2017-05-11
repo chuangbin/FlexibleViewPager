@@ -20,6 +20,7 @@ public class FlexibleViewPager extends ViewPager {
     private OnRefreshListener listener;
     float x = 0;//记录开始触摸的位置
     int xMove = 0;//移动的距离
+    private int SCALE = 5;
 
     public FlexibleViewPager(Context context) {
         super(context);
@@ -82,9 +83,9 @@ public class FlexibleViewPager extends ViewPager {
      */
     public void animation(int moveX) {
         if (listener != null) {
-            if (moveX > getWidth() / 6) {//滑动的距离超过屏幕的1/6才回调
+            if (moveX > getWidth() / SCALE) {//滑动的距离超过屏幕的1/SCALE才回调
                 listener.onLoadMore();
-            } else if (moveX < -getWidth() / 6) {
+            } else if (moveX < -getWidth() / SCALE) {
                 listener.onRefresh();
             }
         }
