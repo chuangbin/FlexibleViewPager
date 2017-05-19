@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements FlexibleViewPager
     private MyViewPagerAdapter adapter;
     private List<View> list = new ArrayList<>();
     private int[] imgs = {R.mipmap.pic1, R.mipmap.pic2, R.mipmap.pic3};
-
+//新的分支
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
