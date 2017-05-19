@@ -91,6 +91,7 @@ public class FlexibleViewPager extends ViewPager {
             }
         }
         x = 0;
+        xMove = 0;
         TranslateAnimation ta = new TranslateAnimation(this.getX(), normal.left, 0, 0);
         ta.setDuration(200);
         this.startAnimation(ta);
